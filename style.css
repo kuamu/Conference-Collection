@@ -1,0 +1,99 @@
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/premium-vector/white-abstract-background-with-hexagon-pattern-style-seamless-concept_7505-1703.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Adjust the blur amount as desired */
+    z-index: -1;
+  }  
+  
+  .container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  h1 span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .controls {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #conferenceList {
+    display: flex;
+    justify-content: space-between; /* Add space between each conference item */
+    flex-wrap: wrap; /* Allow wrapping of conference items */
+    margin-left: 20px; /* Add negative margin to counteract the padding */
+    margin-right: 20px; /* Add negative margin to counteract the padding */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .conference {
+    text-decoration: none;
+    color: #000;
+    flex: 0 0 calc(33.33% - 40px); 
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: #f7f7f7;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    padding: 20px;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    margin-bottom: 10px;
+  }
+  
+  .conference::before {
+      content: "";
+      border-radius: 15px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      background-color: #e0e0e0;
+      transition: height 0.2s ease-out;
+      z-index: -1;
+    }
+  
+  .conference:hover {
+      transform: translateY(4px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+  .conference:hover::before {
+    height: 100%;
+  }
+  
+  .conference h2 {
+    margin-top: 0;
+  }
+  
+  .conference p {
+    margin-bottom: 0;
+  }

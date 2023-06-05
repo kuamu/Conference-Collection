@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>연간 학술대회 목록</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>연간 학술대회 목록</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="학술대회명/학회명 검색">
+    <select id="sortSelect">
+        <option value="nameAsc">학술대회명 정렬 (오름차순)</option>
+        <option value="nameDesc">학술대회명 정렬 (내림차순)</option>
+        <option value="societyAsc">학회명 정렬 (오름차순)</option>
+        <option value="societyDesc">학회명 정렬 (내림차순)</option>
+        <option value="dateAsc">일자순 정렬 (오름차순)</option>
+        <option value="dateDesc">일자순 정렬 (내림차순)</option>
+    </select>
+  </div>
+
+  <div id="conferenceList"></div>
+
+  <script src="conferences.js"></script>
+</body>
+</html>
